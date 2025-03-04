@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
+  <head>
+  <title>Document</title>
 
-    <style>
-        button{
-            background-color: brown;
-            color: azure;
-            border: none;
-        }
-    </style>
+  <style>
+  .red-button{
+    background-color: brown;
+    color: azure;
+    border: none;
+  }
+  .blue-button{
+    background-color:lightblue;
+    color: black;
+  }
+  .add-button{
+    background-color: yellow;
+    color: black;
+    height: 30px;
+  }
+  .buy-button{
+    background-color: orange;
+    color: black;
+    height: 30px;
+  }
+  </style>
 
-</head>
-<body>
-    
-<button title="click me!">
-    hello
-</button>
-<p>
-    paragraph of <button>hello</button>text
-</p>
-    
-</body>
+  </head>
+  <body>
+
+  <button title="click me!" class="red-button" 
+  onclick="
+    alert('welcome to javascript world');
+  ">
+  hello
+  </button>
+  <p>
+  paragraph of <button class="blue-button">hello</button>text
+  </p>
+<button>simon</button> 
+<button>chocolate</button>
+<p>hello, world!!</p>
+<button class="add-button">Add to cart</button>
+<button class="buy-button">Buy now</button>
+  
+  <script>
+    alert('welcome!,in the console')
+    //this is my javascript line
+     alert('hello');
+      console.log(4+4);
+      console.log('some' + 'text');
+  </script>
+
+  </body>
 </html>
