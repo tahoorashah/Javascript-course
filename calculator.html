@@ -4,24 +4,142 @@
   <title>calculator</title>
 
   <style>
-  
+  p{
+    margin-left: 30px;
+  }
+  button{
+   width: 50px;
+   height: 30px;
+  }
   </style>
 
   </head>
   
   <body>
-   <button>1</button>
-  
-   <button>2</button>
 
-   <button>3</button>
+    <p>
+      <button style="box-shadow: 0px 0px 5px black;"
+       onclick="
+        calculation = '';
+        console.log(calculation);
+      ">Clear</button>
+    </p>
 
-   <button>+</button>
+    <p>
+    <button style="box-shadow: 0px 0px 5px black;"
+    onclick="
+    calculation += '1';
+    console.log(calculation);
+  ">1</button>
 
-   <button>=</button>
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += '2';
+    console.log(calculation);
+  ">2</button>
+
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += '3';
+    console.log(calculation);
+  ">3</button>
+
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += ' + ';
+    console.log(calculation);
+  ">+</button>
+</p>
+
+<p>
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += '4';
+    console.log(calculation);
+  ">4</button>
+
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += '5';
+    console.log(calculation);
+  ">5</button>
+
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += '6';
+    console.log(calculation);
+  ">6</button>
+
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += ' - ';
+    console.log(calculation);
+  ">-</button>
+</p>
+
+<p>
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += '7';
+    console.log(calculation);
+  ">7</button>
+
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += '8';
+    console.log(calculation);
+  ">8</button>
+
+  <button style="box-shadow: 0px 0px 5px black;"
+   onclick="
+    calculation += '9';
+    console.log(calculation);
+  ">9</button>
+
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += ' * ';
+    console.log(calculation);
+  ">*</button>
+</p>
+
+<p>
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += '0';
+    console.log(calculation);
+  ">0</button>
+
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += '.';
+    console.log(calculation);
+  ">.</button>
+
+
+ <button style="box-shadow: 0px 0px 5px black;"
+ onclick="
+ //Note: eval() takes a string and runs it as code.
+// Avoid using eval() in real world projects since
+// it can potentially be given harmful code to run.
+// Only use eval() for learning purposes.
+    calculation = eval(calculation);
+    console.log(calculation);
+  ">=</button>
+
+  <button style="box-shadow: 0px 0px 5px black;"
+  onclick="
+    calculation += ' / ';
+    console.log(calculation);
+  ">/</button>
+</p>
+
+
+
   
   <script>
    let calculation ='';
+  let result=calculation;
   </script>
 
   </body>
