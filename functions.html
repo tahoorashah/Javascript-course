@@ -7,13 +7,14 @@
    <body>
 
   <script>
+    //topic:functions----
       function function1() //created function
       {
         console.log('hello');
         console.log(2+3);
       } 
-      function1();
-      //runs function inside thfunction twice
+      function1();//calling function
+      //runs function inside the function twice
       function1(); //reuse of code  
        
       function function2()
@@ -22,7 +23,39 @@
        }
        function2();
       
+      //topic:parameter----
+       function calculate(parameter1)
+       {
+          console.log(parameter1 * 2);
+       }
+       calculate(2000);
+       calculate(5000);
       
+       function calculateTax(cost)
+       {
+          console.log(cost * 0.1);
+       }
+       //2000, 5000 called here as argument
+       calculateTax(2000); 
+       calculateTax(5000);
+
+       function totalTax(cost, taxperc)
+       {
+          console.log(cost * taxperc);
+       }
+       //2000,0.2, 5000 called here as argument
+       totalTax(2000,0.2); 
+       totalTax(5000);
+      
+      
+       //setting default value for parameter
+       function totalTax(cost, taxperc=0.2)
+       {
+          console.log(cost * taxperc);
+       }
+       //2000,0.2, 5000 called here as argument
+       totalTax(2000); 
+       totalTax(5000);
                                  
       
   </script>
