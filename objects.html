@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+  <head>
+  <title>objects</title>
+  </head>
+  
+   <body>
+
+  <script>
+       const product = {
+        name:'socks',
+        price:1090
+       };
+       console.log(product);
+       console.log(product.name);//access value associated with name
+       console.log(product.price); //product.price called dot notation
+
+       //changing value of property
+       product.name = 'cotton socks';
+       console.log(product);
+       product.price = 1000
+       console.log(product)
+
+       //adding newproperty to object
+       product.newProperty = true;
+       console.log(product);
+      
+       //deleting property from object
+       delete product.newProperty;
+       console.log(product);
+
+  </script>
+
+  </body>
+</html>
