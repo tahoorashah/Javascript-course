@@ -29,6 +29,28 @@
        delete product.newProperty;
        console.log(product);
 
+
+       //bracket notation
+       const item  = {
+       name: 'shirt',
+       price:1000,
+       ['delivery-time']: '1 day',//bracket notation
+      
+       rating : {//object inside object
+        stars: 4.5,
+        count:87
+       }
+      };
+       console.log(item['name']);
+      
+       console.log(item['delivery-date']);//bracket notation
+      // console.log(item.total-price);//dot notation
+       console.log(item['delivery-time']);
+       
+       console.log(item.rating.count);
+
+       
+
   </script>
 
   </body>
