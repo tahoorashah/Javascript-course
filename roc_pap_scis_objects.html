@@ -28,19 +28,30 @@
     score.Wins = 0;
     score.Losses = 0;
     score.Ties = 0;
+    localStorage.remove('score')
 
    ">Reset Score</button>
     
   <script>
 
 //adding object for score display
-const score = {
-    Wins: 0,
-    Losses:0,
-    Ties: 0 
+const score = JSON.parse(localStorage.getItem('score'));
+
+//getting element out of local storage
+//console.log(localStorage.getItem('score'));
+ //converting json string back to object we use json.parse
+//console.log(JSON.parse(localStorage.getItem('score'));)
+
+
+  // console.log(localStorage.getItem('message')),
+  
+  if(score === null){
+    score = {
+      Wins : 0,
+      Losses : 0,
+      Ties : 0
     };
-    
-    
+  }
     function playGame(playerMove){
       const computerMove =pickComputerMove(); 
       let result='';
@@ -85,7 +96,6 @@ const score = {
   }
  
   
-  
  //for score step
      if(result==='You Win!')
     {
@@ -97,9 +107,15 @@ const score = {
     else if(result==='Tie'){
       score.Ties += 1;
     }
-      alert(`You picked ${playerMove }. Computer picked ${computerMove}. 
+  //storing element in local storage
+
+  localStorage.setItem('score', JSON.stringify(score));
+  
+  //localStorage.setItem('message','hello');
+  
+    alert(`You picked ${playerMove }. Computer picked ${computerMove}. 
       ${result}
-Wins:${score.Wins}, Losses:${score.Losses}, Ties:${score.Ties}`);
+   Wins:${score.Wins}, Losses:${score.Losses}, Ties:${score.Ties}`);
     }
 
    function pickComputerMove(){
