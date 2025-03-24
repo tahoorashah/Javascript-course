@@ -35,7 +35,15 @@
   <script>
 
 //adding object for score display
-const score = JSON.parse(localStorage.getItem('score'));
+//we will use default operator|| as shortcut method to display the score and as well as in case of null score
+
+let score = JSON.parse(localStorage.getItem('score')) 
+||{
+    Wins : 0,
+    Losses : 0,
+    Ties : 0
+
+}
 
 //getting element out of local storage
 //console.log(localStorage.getItem('score'));
@@ -45,13 +53,14 @@ const score = JSON.parse(localStorage.getItem('score'));
 
   // console.log(localStorage.getItem('message')),
   
-  if(score === null){
+  /*if(!score){ sets default value if score does not exist
     score = {
       Wins : 0,
       Losses : 0,
       Ties : 0
     };
   }
+  */
     function playGame(playerMove){
       const computerMove =pickComputerMove(); 
       let result='';

@@ -68,6 +68,49 @@
      //using json.parse method
       const jsonString = JSON.stringify(item);
       console.log(JSON.parse(jsonString));
+
+      //other values with properties and methods
+      //autoboxing
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+      //object are references
+       const object1 ={  //object1 is reference
+        message:'hello world'
+       };
+       //does not make copy of object, 
+       // makes copy of reference
+       //called 'copy by reference'
+        const object2 = object1;
+        //we changed value of object even if kept the ref object1 as const
+        object1.message = 'GOOd JOB';
+        console.log(object1);
+        console.log(object2);
+
+        //can't compare two objects directly
+        //on camparison it gives false
+        //here reference are compared not the values inide
+        object3 = {
+          message:'GOOD JOB'
+        };
+        console.log(object3 === object2);
+      //below console code gives true as both objects refer to same value
+        console.log(object2 === object1);
+
+      //shortcuts for objects----
+      const object4 = {
+         quote:'GOOD  JOB!!'
+        };
+        //to get quote property out of object
+        //message is variable to save this quote
+        //quote is property
+        const message = object4.quote ;
+        console.log(message);
+        //incase variable name and property name are same
+        //we use a shortcut called as 'Destructuring'    
+
+
+
   </script>
 
   </body>
