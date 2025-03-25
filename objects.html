@@ -97,7 +97,8 @@
       //below console code gives true as both objects refer to same value
         console.log(object2 === object1);
 
-      //shortcuts for objects----
+      
+        //shortcuts for objects----
       const object4 = {
          quote:'GOOD  JOB!!'
         };
@@ -107,9 +108,30 @@
         const message = object4.quote ;
         console.log(message);
         //incase variable name and property name are same
-        //we use a shortcut called as 'Destructuring'    
-
-
+        //we use a shortcut called as 'Destructuring'
+        const object5 = {
+         note:'nice work done!!',
+         price: 799
+        };
+        //const note = object5.note;
+        const{ note, price } = object5;  //shortcut method  
+        console.log(note);
+        console.log(price);
+        // shortcut(shorthand-property )
+        const object6 ={
+        message:message,
+        price:700
+        };
+        console.log(object6);
+        //shortcut(shorthand method)
+        const object7 ={
+        message,
+        method: function function1(){
+          console.log('method');
+        }
+        };
+        console.log(object7);
+        object7.method();
 
   </script>
 
