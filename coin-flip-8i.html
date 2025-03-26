@@ -5,9 +5,21 @@
   </head>
   
    <body>
-
-  <script>
-       let result='';
+ <button onclick="
+  playGame('heads');
+  ">
+  heads
+ </button>
+ 
+ <button onclick="
+  playGame('tails');
+  ">
+  tails
+ </button>
+ 
+ <script>
+    function playGame(guess){
+      let result='';
        let randomNumber=Math.random();
        
        if(randomNumber<0.5){
@@ -26,8 +38,9 @@
         }
           */
 
-         const guess='heads';
         console.log( guess===result ? 'you win!' : 'you lose!');
+    }
+      
   </script>
 
   </body>
