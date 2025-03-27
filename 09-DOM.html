@@ -4,24 +4,45 @@
   <title>DOM</title>
   </head>
   
-   <body>
-      <button>
-        hello world
-      </button>
-  <script>
-    //removes everything from the web-pg and replaces it with 'hello'
-       //document.body.innerHTML = 'hello';
+  <body>
+    <button>
+      hello world
+    </button>
+    <button class="js-button">
+      second button
+    </button>
+ <script>
+  
+  //DOM properties---
+  
+  //1st property-'document.title ''
+  //linked to title at the top of the tab
+  //used to get the title
+  console.log(document.title);
+  document.title = 'DOM Practice';
+  
+  //2nd property-'document.body  ''
+  console.log(document.body);
+  console.log(typeof document.body);
 
-       //changing title name
-      // document.title = 'DOM Practice!';
+  //3rd property-'document.body.innerHTML'
+    console.log(document.body.innerHTML);
+//removes everything from the web-pg and replaces it with 'hello'
+  //document.body.innerHTML = 'hello';
+  // document.body.innerHTML = '<button> body changed  </button>';
+
     
-      //dom properties---
-      //document.title is 1st property
-      //linked to title at the top of the tab
-      //used to get the title
-      console.log(document.title);
-      document.title = 'DOM Practice';
-  </script>
+   // DOM methods---
+   //1st method-'document.querySelector()'
+   console.log(document.querySelector('button'));
+//changes only text inside button and does not removebutton like in 3rd property
+   document.querySelector('button').innerHTML = 'hello to changes';
+   //using document.querySelector for second button
+   //.js-button is called 'class selector'
+   console.log(document.querySelector('.js-button'));
 
+
+  
+  </script>
   </body>
 </html>
