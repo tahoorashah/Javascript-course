@@ -13,6 +13,16 @@
     "class="js-subscribe-button" >
     Subscribe
     </button>
+
+    <p>Amazon Shipping Calculator</p>
+     <p>Orders under $40 = +$10 shipping.</p>
+     <p>Orders over $40 = FREE shipping.</p>
+    
+    <input placeholder="Cost of order"
+    class="js-cost-input">
+    <button onclick="
+   calculate();
+   ">Calculate</button>
  
  <script>
   function subscribe(){
@@ -25,7 +35,10 @@
     buttonElement.innerHTML = 'Subscribe';
     }
   }
-
+  
+  function calculate(){
+    const inputElement = document.querySelector('.js-cost-input');
+  }
 </script>
   </body>
 </html>
