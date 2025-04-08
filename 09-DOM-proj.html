@@ -18,13 +18,22 @@
      <p>Orders under $40 = +$10 shipping.</p>
      <p>Orders over $40 = FREE shipping.</p>
     
-    <input placeholder="Cost of order"
-    class="js-cost-input">
+    <input placeholder="Cost of order" 
+    class="js-cost-input" onkeydown=" 
+     handleCostKeydown(event);
+    ">
     <button onclick="
    calculate();
    ">Calculate</button>
+    
+   <p class="js-total-cost"></p>
  
  <script>
+
+//window object----
+window.console.log('window');
+window.alert('thanks for visiting');
+
   function subscribe(){
     const buttonElement = document.querySelector('.js-subscribe-button');
 
@@ -35,10 +44,27 @@
     buttonElement.innerHTML = 'Subscribe';
     }
   }
+
+  function handleCostKeydown(event) {
+    console.log(event.key);
+    if(event.key === 'Enter') {
+      calculate();
+    }
+  }
   
   function calculate(){
     const inputElement = document.querySelector('.js-cost-input');
+    
+    //Number word converts cost string manually into number
+    let cost = Number(inputElement.value);
+    
+    if(cost < 40) {
+      cost = cost + 10;
+    }
+    document.querySelector('.js-total-cost')
+    .innerHTML = `$${cost}`;
   }
+  
 </script>
   </body>
 </html>
