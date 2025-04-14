@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html >
+  <head>
+  <title>DOM exercise</title>
+  </head>
+  
+  <body>
+    <p>
+      YouTube Subscribe Button
+    </p>
+    <button onclick="
+      subscribe();
+    "class="js-subscribe-button" >
+    Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+     <p>Orders under $40 = +$10 shipping.</p>
+     <p>Orders over $40 = FREE shipping.</p>
+    
+    <input placeholder="Cost of order" 
+    class="js-cost-input" onkeydown=" 
+     handleCostKeydown(event);
+    ">
+    <button onclick="
+   calculate();
+   ">Calculate</button>
+    
+   <p class="js-total-cost"></p>
+ 
+   <button onclick="
+   doneButton();
+   "class="button-control">
+    9a
+   </button>
+   
+   <p>
+  <button onclick="
+   document.querySelector('.js-choice')
+     .innerHTML = 'You chose: heads';
+ ">heads</button>
+
+ <button onclick="
+   document.querySelector('.js-choice')
+     .innerHTML = 'You chose: tails';
+ ">tails</button>
+</p>
+ <p class="js-choice"></p>
+
+ <input placeholder="Name" class="name-input
+ " onekeydown="
+ handleMessage(event);">
+ <button onclick="
+messageBasefunct();
+ ">Submit</button>
+ <p class="js-message"></p>
+
+ <script>
+
+//window object----
+window.console.log('window');
+window.alert('thanks for visiting');
+
+  function subscribe(){
+    const buttonElement = document.querySelector('.js-subscribe-button');
+
+    if(buttonElement.innerText === 'Subscribe') {
+      buttonElement.innerHTML = 'Subscribed';
+    }
+    else{
+    buttonElement.innerHTML = 'Subscribe';
+    }
+  }
+
+  function handleCostKeydown(event) {
+    console.log(event.key);
+    if(event.key === 'Enter') {
+      calculate();
+    }
+  }
+  
+  function calculate(){
+    const inputElement = document.querySelector('.js-cost-input');
+    
+    //Number word converts cost string manually into number
+    let cost = Number(inputElement.value);
+    
+    if(cost < 40) {
+      cost = cost + 10;
+    }
+    document.querySelector('.js-total-cost')
+    .innerHTML = `$${cost}`;
+  }
+  function doneButton(){
+   const changeElement = document.querySelector('.button-control');
+   if (changeElement.innerText === '9a')
+   {
+    changeElement.innerHTML = '9a Done';
+   }
+   else {
+    changeElement.innerHTML = '9a';
+   }
+
+   }
+  console.log( document.querySelector('.button-control'))
+ 
+  function messageBasefunct(){
+   const inputElement = document.querySelector('.name-input');
+ document.querySelector('.js-message')
+ .innerHTML = `your name is: ${inputElement.value}`;
+  }
+  function handleMessage(){
+    if(event.key === 'Enter'){
+      messageBasefunct();
+    }
+  }
+  
+  
+</script>
+  </body>
+</html>
