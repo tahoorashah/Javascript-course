@@ -1,94 +1,3 @@
-<!DOCTYPE html>
-<html >
-  <head>
-  <title>04RPS-game</title>
-  </head>
-   <style>
-    body{
-    background-color: rgb(25, 25, 25);
-    color: white;
-    font-family: Arial;
-    }
-   .first-line{
-    font-size: 30px;
-    font-weight: bold;
-   }
-   .img-css{
-    height: 50px;
-   }
-   .button-css{
-    width: 120px;
-    height: 120px;
-    border-radius: 60px;
-    border: 3px solid white;
-    background-color: transparent;
-    margin-right: 10px;
-    cursor: pointer;
-   }
-   .result-css{
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 50px;
-   }
-   .score-css{
-    margin-top: 60px;
-   }
-   .reset-score{
-    background-color: white;
-    color: black;
-    border: none;
-    
-
-    padding: 10px 10px 10px 10px ;
-   }
-   </style>
-
-   <body>
-    
-    <p class="first-line">Rock Paper Scissors</p>
-    <button  onclick="
-    playGame('rock');
-     " class="button-css">
-     <img src="thumbnail_img/rock-emoji.png"
-     class="img-css">
-     </button>
-    
-   <button onclick="
-     playGame('paper') ;
-   "class="button-css">
-    <img src="thumbnail_img/paper-emoji.png"
-   class="img-css">
-   </button>
-  
-   <button onclick=" 
-   playGame('scissors')  ;
-    " class="button-css">
-    <img src="thumbnail_img/scissors-emoji.png"
-    class="img-css">
-    </button>
-    
-    <p class="js-result result-css">you win.</p>
-    <p class="js-moves">
-     You
-     <img src="thumbnail_img/rock-emoji.png"
-     class="img-css">
-     <img src="thumbnail_img/scissors-emoji.png"
-     class="img-css">
-     Computer
-    </p>
-    <p class="js-score score-css"> </p>
-   
-
-    <button onclick="
-    score.Wins = 0;
-    score.Losses = 0;
-    score.Ties = 0;
-    localStorage.removeItem('score');
-    updateScore();
-   " class="reset-score">Reset Score</button>
-    
-  <script>
-
 //adding object for score display
 //we will use default operator|| as shortcut method to display the score and as well as in case of null score
 
@@ -184,9 +93,12 @@ let score = JSON.parse(localStorage.getItem('score'))
     document.querySelector('.js-result').
     innerHTML = result;
 
-    document.querySelector('.js-moves').
-    innerHTML = `you ${playerMove} - ${computerMove} 
-    Computer`;
+    document.querySelector('.js-moves').innerHTML 
+    =  `You
+     <img src="thumbnail_img/${playerMove}-emoji.png"
+     class="img-css">
+     <img src="thumbnail_img/${computerMove}-emoji.png"class="img-css">
+     Computer` ;
   }
     
        function updateScore(){
@@ -218,8 +130,3 @@ let score = JSON.parse(localStorage.getItem('score'))
     return computerMove;
     }
    
-   
-  </script>
-    
-  </body>
-</html>
