@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html >
+  <head>
+  <title>css DOM project</title>
+  <style>
+    .subscribe-button{
+     border: none;
+     background-color:black;
+     color: aliceblue;
+     font-weight: bold;
+     padding: 10px 10px 10px 10px;
+     border-radius: 40px;
+     cursor: pointer;
+    }
+    .is-subscribed{
+      background-color: gray;
+      color: black;
+    }
+  </style>
+  </head>
+  
+  <body>
+    <p>
+      YouTube Subscribe Button
+    </p>
+    <button onclick="
+      subscribe();
+    "class="js-subscribe-button subscribe-button" >
+    Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+     <p>Orders under $40 = +$10 shipping.</p>
+     <p>Orders over $40 = FREE shipping.</p>
+    
+    <input placeholder="Cost of order" 
+    class="js-cost-input" onkeydown=" 
+     handleCostKeydown(event);
+    ">
+    <button onclick="
+   calculate();
+   ">Calculate</button>
+    
+   <p class="js-total-cost"></p>
+ 
+ <script>
+
+//window object----
+window.console.log('window');
+//window.alert('thanks for visiting');
+
+  function subscribe(){
+    const buttonElement = document.querySelector('.js-subscribe-button');
+
+    if(buttonElement.innerText === 'Subscribe') {
+      buttonElement.innerHTML = 'Subscribed';
+      buttonElement.classList.add
+      ('is-subscribed');
+    }
+    else{
+    buttonElement.innerHTML = 'Subscribe';
+    }
+  }
+
+  function handleCostKeydown(event) {
+    console.log(event.key);
+    if(event.key === 'Enter') {
+      calculate();
+    }
+  }
+  
+  function calculate(){
+    const inputElement = document.querySelector('.js-cost-input');
+    
+    //Number word converts cost string manually into number
+    let cost = Number(inputElement.value);
+    
+    if(cost < 40) {
+      cost = cost + 10;
+    }
+    document.querySelector('.js-total-cost')
+    .innerHTML = `$${cost}`;
+  }
+  
+</script>
+  </body>
+</html>
