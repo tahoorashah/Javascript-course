@@ -1,0 +1,27 @@
+<style>
+.first-button{
+ font-weight: bold;
+  font-size: 15px;
+  background-color: rgb(255,216,20);
+  color: black;
+  padding: 10px 35px 10px 35px;
+  border: none;
+  border-radius: 30px;
+}
+.toggle-button{
+  background-color:rgb(230, 230, 230); 
+  border: none;
+  color: black;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  font-weight:bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.is-toggled{
+   background-color: black;
+   color: white;
+}
+  </style>
