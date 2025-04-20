@@ -8,7 +8,7 @@
   border: none;
   border-radius: 30px;
 }
-.toggle-button{
+.toggle-button{ 
   background-color:rgb(230, 230, 230); 
   border: none;
   color: black;
@@ -23,5 +23,92 @@
 .is-toggled{
    background-color: black;
    color: white;
+}
+
+.game-button{
+  background-color:rgb(230, 230, 230); 
+  border: none;
+  color: black;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  font-weight:bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.game-buttonOn{
+  background-color: black;
+   color: white;
+}
+
+.music-button{
+  background-color:rgb(230, 230, 230); 
+  border: none;
+  color: black;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  font-weight:bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.music-buttonOn{
+  background-color: black;
+   color: white;
+}
+
+.tech-button{
+  background-color:rgb(230, 230, 230); 
+  border: none;
+  color: black;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  font-weight:bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.tech-buttonOn{
+  background-color: black;
+  color: white;
+}
+
+.cal-button{
+  background-color: green;
+  color: white;
+  padding: 12px 15px 12px 15px;
+  border: none;
+  font-size:15px;
+  cursor: pointer;
+}
+.cost-input{
+  font-size: 15px;
+  padding: 10px 10px 10px 10px;
+}
+.js-total-cost{
+  color: red;
+
+}
+
+.cal-editone{
+background-color: black;
+color: white;
+border-radius: 30px;
+height: 50px;
+width: 50px;
+font-size: 15px;
+border: none;
+}
+.cal-edittwo{
+   background-color: rgb(242, 167, 54);
+color: white;
+border-radius: 30px;
+height: 50px;
+width: 50px;
+font-size: 15px;
+border: none;
 }
   </style>

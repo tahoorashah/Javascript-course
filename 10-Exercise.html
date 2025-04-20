@@ -8,13 +8,19 @@
   
   <body>
   <!-- 10a -->
-    <button class="first-button">
+    <button style="font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(255,216,20);
+    color: black;
+    padding: 10px 35px 10px 35px;
+    border: none;
+    border-radius: 30px;" class="first-button">
       Add to Cart
     </button>
     
     <!-- 10c -->
     <p>
-      <button class="js-button"
+      <button class="js-buttontest"
       style="margin-left: 20px;
       margin-top: 20px;">
       Test
@@ -29,6 +35,149 @@
         Gaming
       </button>
      </p>
+
+     <!-- 10e 10f-->
+     <!-- <button class="game-button js-firstbutton" 
+     onclick="buttonOnoff_one();">
+      Game</button>
+    
+      <button class="music-button js-secondbutton"
+      onclick="buttonOnoff_two();">
+      Music</button>
+   
+      <button class="tech-button js-thirdbutton"
+      onclick="buttonOnoff_three();">
+      Tech</button> -->
+    
+      <p>
+        <button class="toggle-button js-button" onclick="
+        toggleButton('.js-button');
+      ">Gaming</button>
+  
+      <button class="toggle-button js-button-2" onclick="
+        toggleButton('.js-button-2');
+      ">Music</button>
+  
+      <button class="toggle-button js-button-3" onclick="
+        toggleButton('.js-button-3');
+      ">Tech</button>
+       </p>
+
+       <!-- 10h-- -->
+       
+       <input placeholder="Cost of order" 
+       class="js-cost-input cost-input" onkeydown=" 
+        handleCostKeydown(event);
+       ">
+           <button class="cal-button"  onclick="
+          calculate();
+          ">Calculate</button>
+           
+          <p class="js-total-cost"></p>
+        
+       <!-- 10i-- -->
+       
+       <p class="cal-line"> </p>
+      <p>
+      <button class="cal-editone"
+      onclick="updateCalculation('1');">
+      1</button>
+
+    <button class="cal-editone"
+     onclick="updateCalculation('2');">
+      2</button>
+
+    <button  class="cal-editone"
+    onclick="updateCalculation('3');">
+      3</button>
+
+    <button class="cal-edittwo"
+    onclick="
+    updateCalculation('+');
+    ">+</button>
+  </p>
+  
+  <p>
+    <button class="cal-editone"
+    onclick="
+      updateCalculation('4');
+    ">4</button>
+  
+    <button class="cal-editone"
+    onclick="
+    updateCalculation('5');
+    ">5</button>
+  
+    <button class="cal-editone"
+    onclick="
+     updateCalculation('6');
+    ">6</button>
+  
+    <button class="cal-edittwo"
+    onclick="
+    updateCalculation('-');
+    ">-</button>
+  </p>
+  
+  <p>
+    <button class="cal-editone"
+    onclick="
+      updateCalculation('7');
+    ">7</button>
+  
+    <button class="cal-editone"
+    onclick="
+      updateCalculation('8');
+    ">8</button>
+  
+    <button class="cal-editone"
+     onclick="
+      updateCalculation('9');
+    ">9</button>
+  
+    <button class="cal-edittwo"
+    onclick=" 
+     updateCalculation('*');
+    ">*</button>
+   </p>
+  
+   <p>
+    <button class="cal-editone"
+    onclick="
+      updateCalculation('0');
+    ">0</button>
+  
+    <button class="cal-editone"
+    onclick="
+      updateCalculation('.');
+    ">.</button>
+  
+  
+   <button class="cal-editone"
+   onclick="
+   //Note: eval() takes a string and runs it as code.
+  // Avoid using eval() in real world projects since
+  // it can potentially be given harmful code to run.
+  // Only use eval() for learning purposes.
+      calculation = eval(calculation);
+     calDom();
+    ">=</button>
+  
+    <button class="cal-edittwo"
+    onclick="
+      updateCalculation('/');
+    ">/</button>
+    </p>
+    <p>
+      <button class="cal-editone"
+      onclick="
+     calculation = '';
+    calDom();
+   ">Clear</button>
+    </p>
+  
+   
+  
     
 
  <script src="scripts/10-exercise.js"></script>
