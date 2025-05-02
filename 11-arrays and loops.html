@@ -58,6 +58,41 @@
   }
   console.log(randomnumber);
 
+
+  //looping through array---
+ /*const todoList = [
+    'make breakfast',  //index zero
+    'cleaning home',   //index one  
+    'watch youtube'    //index two
+  ];
+   for(let index = 0; index<= todoList.length
+   -1; index++) {
+    const value = todoList[index]
+    console.log(value);
+    console.log(index); 
+   }
+   */
+
+   //Accumulator pattern--
+     //problem to get total of numbers in an array--
+  const nums = [1,3,4,5];
+  let result = 0;    //accumulator variable
+  for (let i=0; i < nums.length; i++){
+    const num = nums[i];
+    result += num;   //updates result
+  }
+  console.log(result); 
+
+  //problem to get copy of array with each number double
+    const array = [1,3,5];
+     let doubleArray = [];
+
+ for (let i=0; i<array.length; i++){
+  const numb = array[i];
+  doubleArray.push(numb * 2);
+ }
+ console.log(doubleArray);
+
   </script>
    
     
